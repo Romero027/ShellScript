@@ -6,5 +6,9 @@ function hello1(){
 }
 
 #Method2, without funciton keywords
+hello2(){
+	echo "hello"
+}
 
-hello
+hello1
+hello2
