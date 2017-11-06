@@ -4,9 +4,13 @@ function backup_file () {
   # This function creates a backup of a file.
 
   # Make sure the file exists.
+  # -f checks if the file exists and is a regular file
   if [ -f "$1" ] 
   then
     # Make the BACKUP_FILE variable local to this function.
+    # basename returns the file name(e.g. ~/Desktop/a.cpp -> a.cpp)
+    # $$ is the process ID (PID) of the script itself.
+    # http://www.thegeekstuff.com/2013/05/date-command-examples (date command example)
     local BACKUP_FILE="/tmp/$(basename ${1}).$(date +%F).$$"
     echo "Backing up $1 to ${BACKUP_FILE}"
 
