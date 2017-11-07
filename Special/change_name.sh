@@ -1,7 +1,8 @@
 #!/bin/bash
 #For more information about read:http://linuxtechlab.com/9-bash-scripting-user-input-read-command-redirection/
+DATE=$(date +%F)
 read -p "Please enter a file extension: " EXTENSION
-read -p "Please enter a file prefix: (Press ENTER for ${DATE}) " PREFIX
+read -p "Please enter a file prefix: (Press ENTER for ${DATE} " PREFIX
 
 for FILE in *.${EXTENSION}
 do
